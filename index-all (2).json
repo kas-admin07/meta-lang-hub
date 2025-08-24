@@ -1,0 +1,52 @@
+{
+  "patterns": [
+    {
+      "index": "js-cmd-handler",
+      "repo": "meta-lang-js",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+      "path": "cmd-handler/cmd-handler.json",
+      "tag": "command-handler",
+      "lang": "js",
+      "comment": "// [js-cmd-handler]",
+      "similar_to": ["js-msg-handler"],
+      "dependencies": ["@maxhub/max-bot-api>=0.2.1"],
+      "verified": true
+    },
+    {
+      "index": "js-msg-handler",
+      "repo": "meta-lang-js",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+      "path": "msg-handler/msg-handler.json",
+      "tag": "message-handler",
+      "lang": "js",
+      "comment": "// [js-msg-handler]",
+      "similar_to": ["js-cmd-handler"],
+      "dependencies": ["@maxhub/max-bot-api>=0.2.1"],
+      "verified": true
+    },
+    {
+      "index": "js-shortlink-api",
+      "repo": "meta-lang-js",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+      "path": "shortlink-api/shortlink-api.json",
+      "tag": "url-shortener",
+      "lang": "js",
+      "comment": "// [js-shortlink-api]",
+      "similar_to": [],
+      "dependencies": ["axios>=1.6.0"],
+      "verified": true
+    },
+    {
+      "index": "js-bot-init",
+      "repo": "meta-lang-js",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+      "path": "bot-init/bot-init.json",
+      "tag": "bot-initialization",
+      "lang": "js",
+      "comment": "// [js-bot-init]",
+      "similar_to": [],
+      "dependencies": ["@maxhub/max-bot-api>=0.2.1", "dotenv>=16.6.1"],
+      "verified": true
+    }
+  ]
+}
