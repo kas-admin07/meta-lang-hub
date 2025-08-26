@@ -1,122 +1,172 @@
 {
-  "meta": {
-    "version": "1.0.0",
-    "description": "Центральный индекс метаданных для Meta-Lang Hub",
-    "last_updated": "2024-01-01",
-    "total_patterns": 4,
-    "languages": ["javascript"],
-    "adapters": 1
-  },
-  "patterns": {
-    "js-cmd-handler": {
-      "id": "js-cmd-handler",
-      "name": "JavaScript Command Handler",
-      "description": "Обработчик команд для Telegram бота",
-      "language": "javascript",
-      "category": "bot-handlers",
-      "tags": ["telegram", "commands", "bot", "handler"],
-      "complexity": "medium",
-      "token_cost": "low",
-      "dependencies": ["telegraf"],
-      "source_repo": "meta-lang-js",
-      "file_path": "/patterns/bot/cmd-handler.js",
-      "related_patterns": ["js-msg-handler", "js-bot-init"],
-      "adapters": ["js-py-rest"]
+  "patterns": [
+    {
+      "index": "js-cmd-handler",
+      "repo": "meta-lang-js",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+      "path": "cmd-handler/cmd-handler.json",
+      "tag": "command-handler",
+      "lang": "js",
+      "comment": "// [js-cmd-handler]",
+      "similar_to": ["js-msg-handler"],
+      "dependencies": ["@maxhub/max-bot-api>=0.2.1"],
+      "verified": true
     },
-    "js-msg-handler": {
-      "id": "js-msg-handler",
-      "name": "JavaScript Message Handler",
-      "description": "Обработчик сообщений для Telegram бота",
-      "language": "javascript",
-      "category": "bot-handlers",
-      "tags": ["telegram", "messages", "bot", "handler"],
-      "complexity": "medium",
-      "token_cost": "low",
-      "dependencies": ["telegraf"],
-      "source_repo": "meta-lang-js",
-      "file_path": "/patterns/bot/msg-handler.js",
-      "related_patterns": ["js-cmd-handler", "js-bot-init"],
-      "adapters": ["js-py-rest"]
+    {
+      "index": "js-msg-handler",
+      "repo": "meta-lang-js",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+      "path": "msg-handler/msg-handler.json",
+      "tag": "message-handler",
+      "lang": "js",
+      "comment": "// [js-msg-handler]",
+      "similar_to": ["js-cmd-handler"],
+      "dependencies": ["@maxhub/max-bot-api>=0.2.1"],
+      "verified": true
     },
-    "js-shortlink-api": {
-      "id": "js-shortlink-api",
-      "name": "JavaScript ShortLink API",
-      "description": "API для создания и управления короткими ссылками",
-      "language": "javascript",
-      "category": "api",
-      "tags": ["api", "shortlink", "url", "express"],
-      "complexity": "high",
-      "token_cost": "medium",
-      "dependencies": ["express", "mongoose"],
-      "source_repo": "meta-lang-js",
-      "file_path": "/patterns/api/shortlink.js",
-      "related_patterns": ["js-bot-init"],
-      "adapters": ["js-py-rest"]
+    {
+      "index": "js-shortlink-api",
+      "repo": "meta-lang-js",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+      "path": "shortlink-api/shortlink-api.json",
+      "tag": "url-shortener",
+      "lang": "js",
+      "comment": "// [js-shortlink-api]",
+      "similar_to": [],
+      "dependencies": ["axios>=1.6.0"],
+      "verified": true
     },
-    "js-bot-init": {
-      "id": "js-bot-init",
-      "name": "JavaScript Bot Initialization",
-      "description": "Инициализация и настройка Telegram бота",
-      "language": "javascript",
-      "category": "initialization",
-      "tags": ["telegram", "bot", "init", "setup"],
-      "complexity": "low",
-      "token_cost": "low",
-      "dependencies": ["telegraf", "dotenv"],
-      "source_repo": "meta-lang-js",
-      "file_path": "/patterns/bot/init.js",
-      "related_patterns": ["js-cmd-handler", "js-msg-handler"],
-      "adapters": []
-    }
-  },
-  "adapters": {
-    "js-py-rest": {
-      "id": "js-py-rest",
-      "name": "JavaScript to Python REST Adapter",
-      "description": "REST API адаптер для интеграции JS и Python компонентов",
-      "from_language": "javascript",
-      "to_language": "python",
-      "type": "rest-api",
-      "complexity": "medium",
-      "token_cost": "low",
-      "source_repo": "meta-lang-js",
-      "file_path": "/adapters/js-py-rest.js",
-      "supported_patterns": ["js-cmd-handler", "js-msg-handler", "js-shortlink-api"]
-    }
-  },
-  "repositories": {
-    "meta-lang-js": {
-      "name": "meta-lang-js",
-      "description": "JavaScript паттерны для Meta-Lang Hub",
-      "url": "https://github.com/kas-admin07/meta-lang-js",
-      "language": "javascript",
-      "pattern_count": 4,
-      "status": "planned"
+    {
+      "index": "js-bot-init",
+      "repo": "meta-lang-js",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+      "path": "bot-init/bot-init.json",
+      "tag": "bot-initialization",
+      "lang": "js",
+      "comment": "// [js-bot-init]",
+      "similar_to": [],
+      "dependencies": ["@maxhub/max-bot-api>=0.2.1", "dotenv>=16.6.1"],
+      "verified": true
     },
-    "meta-lang-py": {
-      "name": "meta-lang-py",
-      "description": "Python паттерны для Meta-Lang Hub",
-      "url": "https://github.com/kas-admin07/meta-lang-py",
-      "language": "python",
-      "pattern_count": 0,
-      "status": "planned"
+    {
+      "index": "py-cmd-handler",
+      "repo": "meta-lang-py",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-py",
+      "path": "cmd-handler/cmd-handler.json",
+      "tag": "command-handler",
+      "lang": "py",
+      "comment": "# [py-cmd-handler]",
+      "similar_to": ["py-msg-handler"],
+      "dependencies": ["python-telegram-bot>=20.0"],
+      "verified": true
+    },
+    {
+      "index": "py-msg-handler",
+      "repo": "meta-lang-py",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-py",
+      "path": "msg-handler/msg-handler.json",
+      "tag": "message-handler",
+      "lang": "py",
+      "comment": "# [py-msg-handler]",
+      "similar_to": ["py-cmd-handler"],
+      "dependencies": ["python-telegram-bot>=20.0"],
+      "verified": true
+    },
+    {
+      "index": "py-shortlink-api",
+      "repo": "meta-lang-py",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-py",
+      "path": "shortlink-api/shortlink-api.json",
+      "tag": "url-shortener",
+      "lang": "py",
+      "comment": "# [py-shortlink-api]",
+      "similar_to": [],
+      "dependencies": ["requests>=2.28.0"],
+      "verified": true
+    },
+    {
+      "index": "py-bot-init",
+      "repo": "meta-lang-py",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-py",
+      "path": "bot-init/bot-init.json",
+      "tag": "bot-initialization",
+      "lang": "py",
+      "comment": "# [py-bot-init]",
+      "similar_to": [],
+      "dependencies": ["python-telegram-bot>=20.0"],
+      "verified": true
+    },
+    {
+      "index": "js-py-rest",
+      "repo": "meta-lang-hub",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-hub",
+      "path": "adapters/js-py-rest/js-py-rest.json",
+      "tag": "cross-language-adapter",
+      "lang": "js",
+      "comment": "// [js-py-rest]",
+      "similar_to": [],
+      "dependencies": ["axios>=1.6.0"],
+      "verified": true
+    },
+    {
+      "index": "py-js-rest",
+      "repo": "meta-lang-hub",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-hub",
+      "path": "adapters/py-js-rest/py-js-rest.json",
+      "tag": "cross-language-adapter",
+      "lang": "py",
+      "comment": "# [py-js-rest]",
+      "similar_to": [],
+      "dependencies": ["requests>=2.28.0"],
+      "verified": true
+    },
+    {
+      "index": "go-cmd-handler",
+      "repo": "meta-lang-go",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-go",
+      "path": "cmd-handler/cmd-handler.json",
+      "tag": "command-handler",
+      "lang": "go",
+      "comment": "// [go-cmd-handler]",
+      "similar_to": ["go-msg-handler"],
+      "dependencies": ["github.com/go-telegram-bot-api/telegram-bot-api/v5>=5.5.1"],
+      "verified": true
+    },
+    {
+      "index": "go-msg-handler",
+      "repo": "meta-lang-go",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-go",
+      "path": "msg-handler/msg-handler.json",
+      "tag": "message-handler",
+      "lang": "go",
+      "comment": "// [go-msg-handler]",
+      "similar_to": ["go-cmd-handler"],
+      "dependencies": ["github.com/go-telegram-bot-api/telegram-bot-api/v5>=5.5.1"],
+      "verified": true
+    },
+    {
+      "index": "go-shortlink-api",
+      "repo": "meta-lang-go",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-go",
+      "path": "shortlink-api/shortlink-api.json",
+      "tag": "url-shortener",
+      "lang": "go",
+      "comment": "// [go-shortlink-api]",
+      "similar_to": [],
+      "dependencies": ["github.com/teris-io/shortid>=0.0.0"],
+      "verified": true
+    },
+    {
+      "index": "go-bot-init",
+      "repo": "meta-lang-go",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-go",
+      "path": "bot-init/bot-init.json",
+      "tag": "bot-initializer",
+      "lang": "go",
+      "comment": "// [go-bot-init]",
+      "similar_to": [],
+      "dependencies": ["github.com/go-telegram-bot-api/telegram-bot-api/v5>=5.5.1"],
+      "verified": true
     }
-  },
-  "usage_instructions": {
-    "for_ai": {
-      "description": "Инструкции для ИИ по использованию паттернов",
-      "steps": [
-        "1. Найдите нужный паттерн по тегам или категории",
-        "2. Проверьте зависимости и сложность",
-        "3. Используйте метаданные для понимания функциональности",
-        "4. Адаптируйте код под конкретную задачу",
-        "5. Применяйте адаптеры для кросс-языковой интеграции"
-      ],
-      "optimization_tips": [
-        "Используйте token_cost для оценки затрат",
-        "Комбинируйте related_patterns для комплексных решений",
-        "Применяйте адаптеры для переиспользования между языками"
-      ]
-    }
-  }
+  ]
 }
