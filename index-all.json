@@ -182,3 +182,15 @@
     }
   ]
 }
+{
+  "index": "py-inline-btn-handler",
+  "repo": "meta-lang-py",
+  "repo_url": "https://github.com/kas-admin07/meta-lang-py",
+  "path": "inline-btn-handler/inline-btn-handler.json",
+  "tag": "inline-button-handler",
+  "lang": "py",
+  "comment": "# [py-inline-btn-handler]",
+  "similar_to": [],
+  "dependencies": ["python-telegram-bot>=20.0"],
+  "verified": true
+}
