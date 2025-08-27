@@ -167,6 +167,18 @@
       "similar_to": [],
       "dependencies": ["github.com/go-telegram-bot-api/telegram-bot-api/v5>=5.5.1"],
       "verified": true
+    },
+    {
+      "index": "go-py-rest",
+      "repo": "meta-lang-go",
+      "repo_url": "https://github.com/kas-admin07/meta-lang-go",
+      "path": "adapters/go-py-rest/go-py-rest.json",
+      "tag": "cross-language-adapter",
+      "lang": "go",
+      "comment": "// [go-py-rest]",
+      "similar_to": [],
+      "dependencies": ["net/http"],
+      "verified": true
     }
   ]
 }
