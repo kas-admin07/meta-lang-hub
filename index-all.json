@@ -206,3 +206,15 @@
   "dependencies": ["aiogram>=3.0.0"],
   "verified": true
 }
+{
+  "index": "js-inline-btn-handler",
+  "repo": "meta-lang-js",
+  "repo_url": "https://github.com/kas-admin07/meta-lang-js",
+  "path": "inline-btn-handler-telegraf/inline-btn-handler-telegraf.json",
+  "tag": "inline-button-handler",
+  "lang": "js",
+  "comment": "// [js-inline-btn-handler]",
+  "similar_to": ["py-inline-btn-handler", "py-async-inline-btn-handler"],
+  "dependencies": ["telegraf>=4.0.0"],
+  "verified": true
+}
